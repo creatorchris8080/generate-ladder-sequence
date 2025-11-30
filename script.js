@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", () => {
     const enterPrompt = document.querySelector("#enterPrompt");
     const findSeq = document.querySelector("#findSeq");
@@ -239,12 +237,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function UpdateData() {
 
         document.querySelectorAll(".note").forEach(e => e.style.display = "none");
-
         const newPrompt = (enterPrompt.value || "").toUpperCase();
-
-        // ⭐ Add the placeholder here
+        
         enterPrompt.placeholder = newPrompt;
-
         const result = createGroupedOutput(newPrompt);
         const groups = result.groups;
         const groupCount = result.count;
@@ -252,9 +247,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const subseqParts = subseq.split("/");
         const fgPairs = subseqParts[0] ? extractPairs(subseqParts[0]) : [];
         const sgPairs = subseqParts[1] ? extractPairs(subseqParts[1]) : [];
-
-
         const outputBox = document.getElementById("outputBox");
+        
         if (outputBox) outputBox.style.display = "none";
 
         twoGroupsDiv.style.display = (groupCount === 2 ? "block" : "none");
@@ -305,5 +299,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
 
 
