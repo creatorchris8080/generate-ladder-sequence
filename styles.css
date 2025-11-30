@@ -1,0 +1,410 @@
+#twoGroups,
+#morethantwoGroups {
+    display: none;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.fixed-left {
+    width: 30%;
+    float: left;
+    background-color: #f0f0f0;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px 10px;
+}
+
+.scrollable-right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.twogroups-ladder {
+    height: 100px;
+
+    align-content: center;
+    position: relative;
+}
+
+.rung-twogroups {
+    background-color: black;
+    height: 8px;
+    width: 100%;
+}
+
+.output-twogroups {
+    position: absolute;
+    top: 16px;
+    right: 70px;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-width: 8px;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ladderprogram-twogroups {
+    width: 700px;
+}
+
+.input-twogroups-no {
+    position: absolute;
+    background-color: white;
+    width: 30px;
+    height: 50px;
+    top: 25px;
+    left: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-twogroups-nc {
+    position: absolute;
+    background-color: white;
+    width: 30px;
+    height: 50px;
+    top: 25px;
+    left: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.input-twogroups {
+    background-color: black;
+    width: 8px;
+    height: 50px;
+}
+
+.input-twogroups-angled {
+    background-color: black;
+    width: 8px;
+    height: 50px;
+    position: absolute;
+    left: 11px;
+    transform: rotate(25deg);
+}
+
+.subseq-no {
+    position: absolute;
+    top: -22px;
+    left: 20%;
+}
+
+.subseq-nc {
+    position: absolute;
+    top: -22px;
+    left: 20%;
+
+}
+
+.twogroups-lutch-ladder {
+    height: 100px;
+    align-content: center;
+    position: relative;
+    display: flex;
+}
+
+.rung-lutch-twogroups-in {
+    position: relative;
+    background-color: black;
+    height: 8px;
+    width: 30%;
+    top: 45%;
+}
+
+.rung-lutch-twogroups-out {
+    position: relative;
+    background-color: black;
+    height: 8px;
+    width: 40%;
+    top: 45%;
+    right: -210px;
+}
+
+.line-connectors-ladder-1 {
+    position: relative;
+    background-color: black;
+    height: 107px;
+    width: 8px;
+    top: -54%;
+    left: 29%;
+}
+
+.line-connectors-ladder-2 {
+    position: relative;
+    background-color: black;
+    height: 100px;
+    width: 8px;
+    top: -47.1%;
+    left: -12%;
+}
+
+.line-connectors-ladder-3 {
+    position: relative;
+    background-color: black;
+    height: 100px;
+    width: 8px;
+    top: -47.1%;
+    left: -43%;
+}
+
+.line-connectors-ladder-4 {
+    position: relative;
+    background-color: black;
+    height: 107px;
+    width: 8px;
+    top: -54%;
+    left: -515px;
+}
+
+
+.line-connectors-ladder-1-1 {
+    position: relative;
+    background-color: black;
+    height: 107px;
+    width: 8px;
+    top: -54%;
+    left: 59%;
+}
+
+.line-connectors-ladder-2-2 {
+    position: relative;
+    background-color: black;
+    height: 101px;
+    width: 8px;
+    top: -48%;
+    left: 18%;
+}
+
+.rung-lutch-twogroups-out-out {
+    position: relative;
+    background-color: black;
+    height: 8px;
+    width: 40%;
+    top: 45%;
+    right: -420px;
+}
+
+.input-twogroups-no-lutch {
+    position: absolute;
+    background-color: white;
+    width: 30px;
+    height: 50px;
+    top: 25px;
+    right: 200px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.outputs {
+    margin-top: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 50px;
+    justify-content: center;
+    text-align: center;
+}
+
+#outputcloning {
+    height: 100px;
+    width: 80px;
+    align-content: center;
+    position: relative;
+}
+
+#outputcloningmoreGroups {
+    height: 100px;
+    width: 80px;
+    align-content: center;
+    position: relative;
+}
+
+#displayrelay {
+    height: 100px;
+    width: 80px;
+    align-content: center;
+    position: relative;
+}
+
+.ladderprogram-morethantwogroups {
+    width: 700px;
+}
+
+.input-twogroups-no1 {
+    position: absolute;
+    background-color: white;
+    width: 30px;
+    height: 50px;
+    top: 25px;
+    left: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-twogroups-no2 {
+    position: absolute;
+    background-color: white;
+    width: 30px;
+    height: 50px;
+    top: 25px;
+    left: 118px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 600px;
+    height: 100vh;
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto;
+    justify-items: center;
+    text-align: center;
+
+}
+
+.content {
+    margin-left: 620px;
+    padding: 20px 20px;
+
+}
+
+.logo {
+    width: 300px;
+    height: 110px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.secno {
+    position: absolute;
+    width: 30px;
+    height: 55px;
+    top: 28px;
+    left: 47px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.secno1 {
+    background-color: white;
+    width: 8px;
+    height: 100%;
+}
+
+.logoName {
+    background-color: #222;
+    z-index: 999;
+    padding: 4px 4px;
+    font-size: 18px;
+}
+
+.outcircle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 22px;
+    right: 30px;
+    display: flex;
+    border: solid 8px white;
+    border-radius: 35px;
+}
+
+.note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#enterPrompt {
+    margin-top: 120px;
+    width: 400px;
+    height: 280px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    vertical-align: top;
+    border-radius: 5px;
+}
+
+.enterDetails {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+
+#update,
+#reloadButton {
+    width: 190px;
+}
+
+#note {
+    z-index: 0;
+}
+
+.outputdisplay {
+    width: 400px;
+    background-color: white;
+    color: black;
+    text-align: start;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    margin-top: 70px;
+    font-size: 12px;
+    display: none;
+
+
+}
+
+#findSeq,
+#subSeq,
+#numberGroup {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    max-width: 100%;
+}

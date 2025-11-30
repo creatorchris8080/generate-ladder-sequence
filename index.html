@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLS</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <div class="secno">
+                <div class="secno1"></div>
+                <div class="secno1"></div>
+            </div>
+            <div class="logoName">
+                GENERATE LADDER SEQUENCE
+            </div>
+            <div class="outcircle"></div>
+        </div>
+        <div class="enterDetails">
+            <textarea id="enterPrompt" placeholder="Type your sequence here (example: A+B+B-A-)"></textarea>
+            <div class="buttons">
+                <button id="update">ENTER</button>
+                <button id="reloadButton">CLEAR</button>
+            </div>
+        </div>
+        <div class="outputdisplay" id="outputBox">
+            <div>
+                <div class="outputdisplay1">
+                    <div id="findSeq" type="text"> Sequence:</div>
+                    <div id="subSeq" type="text">SubSequence: </div>
+                    <div id="numberGroup" type="text">Group Number: </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scrollable-right">
+        <div class="content">
+            <div class="note">
+                <div>
+                    ADVANTAGES:
+                    <ul>
+                        <li>Fast ladder generation</li>
+                        <li>Accurate and consistent logic</li>
+                        <li>No input limit</li>
+                        <li>Simple for beginners</li>
+                        <li>Helpful for students & automation projects</li>
+                    </ul>
+                    DISADVANTAGES:
+                    <ul>
+                        <li>Works only with cylinder-type (+/–) outputs</li>
+                        <li>No timer instructions (TON/TOFF)</li>
+                        <li>No advanced PLC commands</li>
+                        <li>Not intended for full PLC program generation</li>
+                        <li>Only creates structural ladder layout</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ladderprogram-twogroups" id="twoGroups">
+                <div class="outputs">
+                    <div id="displayrelay">
+                        <div>
+                            R0
+                        </div>
+                    </div>
+                    <div id="outputcloning">
+                        <div id="sequenceOutputs"> display the sequence here</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="twogroups-ladder">
+                        <div class="rung-twogroups"></div>
+                        <div class="output-twogroups"></div>
+                        <div class="input-twogroups-no">
+                            <div class="input-twogroups"> </div>
+                            <div class="input-twogroups"> </div>
+                            <div class="subseq-no">
+                                <div id="subsegoflastSG"> I </div>
+                            </div>
+                        </div>
+                        <div class="input-twogroups-nc">
+                            <div class="input-twogroups"> </div>
+                            <div class="input-twogroups"> </div>
+                            <div class="input-twogroups-angled"></div>
+                            <div class="subseq-nc">
+                                <div id="subsegoflastFG"> I </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="twogroups-lutch-ladder">
+                            <div class="rung-lutch-twogroups-in"></div>
+                            <div class="rung-lutch-twogroups-out"></div>
+                            <div class="line-connectors-ladder-1"></div>
+                            <div class="line-connectors-ladder-2"></div>
+                            <div class="line-connectors-ladder-3"></div>
+                            <div class="line-connectors-ladder-4"></div>
+                            <div class="input-twogroups-no">
+                                <div class="input-twogroups"> </div>
+                                <div class="input-twogroups"> </div>
+                                <div class="subseq-no"> R0 </div>
+                            </div>
+                            <div class="output-twogroups">
+                                <div id="firstletterOutputFG"> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div id="linkoutputFG">
+                            <div class="twogroups-lutch-ladder">
+                                <div class="rung-lutch-twogroups-out-out"></div>
+                                <div class="line-connectors-ladder-1-1"></div>
+                                <div class="line-connectors-ladder-2-2"></div>
+                                <div class="output-twogroups">
+                                    <div class="secormoreOutputFG"> </div>
+                                </div>
+                                <div class="input-twogroups-no-lutch">
+                                    <div class="input-twogroups"> </div>
+                                    <div class="input-twogroups"> </div>
+                                    <div class="subseq-no">
+                                        <div id="subseqofmoreFG"> I </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="twogroups-ladder">
+                            <div class="rung-twogroups"></div>
+                            <div class="output-twogroups">
+                                <div id="firstletterOutputSG"> </div>
+                            </div>
+                            <div class="input-twogroups-no">
+                                <div class="input-twogroups"> </div>
+                                <div class="input-twogroups"> </div>
+                                <div class="input-twogroups-angled"></div>
+                                <div class="subseq-no"> R0 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div id="linkoutputSG">
+                            <div class="twogroups-lutch-ladder">
+                                <div class="rung-lutch-twogroups-out-out"></div>
+                                <div class="line-connectors-ladder-1-1"></div>
+                                <div class="line-connectors-ladder-2-2"></div>
+                                <div class="output-twogroups"> </div>
+                                <div class="input-twogroups-no-lutch">
+                                    <div class="input-twogroups"> </div>
+                                    <div class="input-twogroups"> </div>
+                                    <div class="subseq-no">
+                                        <div id="subseqofmoreSG"> I </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ladderprogram-morethantwogroups" id="morethantwoGroups">
+                <div>
+                    <div class="morethantwo-ladder" id="morethantwogroupsClone">
+                        <div>
+                            <div class="twogroups-ladder">
+                                <div class="rung-twogroups"></div>
+                                <div class="output-twogroups"></div>
+                                <div class="input-twogroups-no1">
+                                    <div class="input-twogroups"> </div>
+                                    <div class="input-twogroups"> </div>
+                                    <div class="subseq-no">
+                                        <div id="subseqinputNO"> I </div>
+                                    </div>
+                                </div>
+                                <div class="input-twogroups-no2">
+                                    <div class="input-twogroups"> </div>
+                                    <div class="input-twogroups"> </div>
+                                    <div class="subseq-no">
+                                        <div id="relayNO"> R </div>
+                                    </div>
+                                </div>
+                                <div class="input-twogroups-nc">
+                                    <div class="input-twogroups"> </div>
+                                    <div class="input-twogroups"> </div>
+                                    <div class="input-twogroups-angled"></div>
+                                    <div class="subseq-nc">
+                                        <div id="relayNC"> II </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="twogroups-lutch-ladder">
+                                    <div class="rung-lutch-twogroups-in"></div>
+                                    <div class="rung-lutch-twogroups-out"></div>
+                                    <div class="line-connectors-ladder-1"></div>
+                                    <div class="line-connectors-ladder-2"></div>
+                                    <div class="line-connectors-ladder-3"></div>
+                                    <div class="line-connectors-ladder-4"></div>
+                                    <div class="input-twogroups-no">
+                                        <div class="input-twogroups"> </div>
+                                        <div class="input-twogroups"> </div>
+                                        <div class="subseq-no">
+                                            <div id="relaylutchDisplay">R0</div>
+                                        </div>
+                                    </div>
+                                    <div class="output-twogroups">
+                                        <div id="firstletterOutputFG"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div id="linkoutputlutchmoreGroups">
+                                <div>
+                                    <div class="twogroups-lutch-ladder">
+                                        <div class="rung-lutch-twogroups-out-out"></div>
+                                        <div class="line-connectors-ladder-1-1"></div>
+                                        <div class="line-connectors-ladder-2-2"></div>
+                                        <div class="output-twogroups">
+                                            <div class="nothing"> </div>
+                                        </div>
+                                        <div class="input-twogroups-no-lutch">
+                                            <div class="input-twogroups"> </div>
+                                            <div class="input-twogroups"> </div>
+                                            <div class="subseq-no">
+                                                <div id="secsubseqNO"> I </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="outputs">
+                    <div id="outputcloningmoreGroups">
+                        <div id="sequenceOutputsmoreGroups">Enter again to generate the output</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
